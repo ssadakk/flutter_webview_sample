@@ -20,52 +20,57 @@ class HomeView extends GetView {
       WebView.platform = SurfaceAndroidWebView();
     }
 
-    textEditController.value = TextEditingValue(text: "https://google.com");
+    textEditController.value = TextEditingValue(text: "https://naver.com");
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          Row(
-            children: [
-              Expanded(
-                child: TextField(
-                  controller: textEditController,
-                    decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Url',
-                )),
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Column(
+          children: [
+            Expanded(
+              flex: 5,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: textEditController,
+                        decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Url',
+                    )),
+                  ),
+                  TextButton(
+                    style: TextButton.styleFrom(backgroundColor: Colors.grey),
+                      onPressed: (){
+                        webViewController.loadUrl(textEditController.text);
+                      }, child: Text("Go!")),
+                ],
               ),
-              TextButton(
-                style: TextButton.styleFrom(backgroundColor: Colors.grey),
-                  onPressed: (){
-                    webViewController.loadUrl(textEditController.text);
-                  }, child: Text("Go!")),
-            ],
-          ),
-          Expanded(
-            flex: 90,
-            child: Container(
-              color: Colors.black,
-              child: Padding(
-                padding: const EdgeInsets.all(2.0),
-                child: WebView(
-                  // initialUrl: widget.url,
-                  initialUrl: textEditController.text,
-                  onWebViewCreated: (webController) {
-                    webViewController = webController;
-                  },
-                  onPageFinished: (url) async {
-                    var title = await webViewController.getTitle();
-                    if (title != null && title.isEmpty) {
-                      webViewController.reload();
-                    }
-                  },
+            ),
+            Expanded(
+              flex: 95,
+              child: Container(
+                color: Colors.black,
+                child: Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: WebView(
+                    // initialUrl: widget.url,
+                    initialUrl: textEditController.text,
+                    onWebViewCreated: (webController) {
+                      webViewController = webController;
+                    },
+                    onPageFinished: (url) async {
+                      var title = await webViewController.getTitle();
+                      if (title != null && title.isEmpty) {
+                        webViewController.reload();
+                      }
+                    },
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
