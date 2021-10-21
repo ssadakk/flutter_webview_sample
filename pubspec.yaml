@@ -30,6 +30,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   webview_flutter: ^2.0.12
   get: ^4.3.8
+  flutter_inappwebview: ^5.3.2
+  url_launcher: ^6.0.10
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +47,17 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/handwriting/
+    - assets/handwriting/css/
+    - assets/handwriting/img/
+    - assets/handwriting/text/
+    - assets/handwriting/vendor/bootstrap/css/
+    - assets/handwriting/vendor/bootstrap/js/
+    - assets/handwriting/vendor/fontawesome-free/css/
+    - assets/handwriting/vendor/fontawesome-free/webfonts/
+    - assets/handwriting/vendor/jquery/
+    - assets/handwriting/vendor/selvy/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

@@ -1,0 +1,69 @@
+body, html {
+  height: 100%;
+}
+
+#contents {
+  height: 100%;
+}
+
+#hwrCanvas {
+  background-color: #ffffff;
+}
+
+.candidate-item {
+  position: absolute;
+  width: 100%;
+  top: 69px; /* navbar height */
+  background-color: #eeeeee;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  font-size: 150%;
+  border-bottom: 1px solid #dee2e6
+}
+
+.tab-link {
+  position: absolute;
+  top: 127px; /* candidate-item height(100) + margin(20) */
+  left: 20px;
+  bottom: auto;
+}
+
+.recognition-type {
+  position: absolute;
+  top: 189px; /* navbar height(69) + candidate-item height(100) + margin(20) */
+  left: 20px;
+}
+
+.help-tool {
+  position: absolute;
+  top: 191px;  /* navbar height(69) + candidate-item height(100) + margin(22) */
+  left: 291px;
+}
+
+.help-tool-math {
+  position: absolute;
+  top: 191px;  /* same as help-tool */
+  left: 180px;
+}
+
+.func-tool {
+  position: absolute;
+  top: 191px; /* same as help-tool */
+  right: 20px;
+}
+
+@media (max-width: 480px) {
+  #language {
+    width: 146px;
+  }
+
+  .help-tool {
+    left: 180px;
+  }
+
+  .tab-link {
+    top: auto;
+    bottom: -1px;
+  }
+}
