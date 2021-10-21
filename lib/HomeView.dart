@@ -25,66 +25,83 @@ class HomeView extends GetView {
 
   final textEditController = TextEditingController();
 
-  void openAlbum(){
+  void openAlbum() {
     print('openAlbum()');
   }
-  void openAlbumOnly(){
+
+  void openAlbumOnly() {
     print('openAlbumOnly()');
   }
-  void openActivityOnly(){
+
+  void openActivityOnly() {
     print('openActivityOnly()');
   }
-  void openActivity(){
+
+  void openActivity() {
     print('openActivity()');
   }
-  void studyComplete(){
+
+  void studyComplete() {
     print('studyComplete()');
   }
-  void runScreenshot(){
+
+  void runScreenshot() {
     print('runScreenshot()');
   }
-  void closeWindowWithStudyPlayer(){
+
+  void closeWindowWithStudyPlayer() {
     print('closeWindowWithStudyPlayer()');
   }
-  void startWifiManager(){
+
+  void startWifiManager() {
     print('startWifiManager()');
   }
-  void searchWord(String jsonString){
+
+  void searchWord(String jsonString) {
     print('searchWord(), jsonString: ${jsonString}');
   }
-  void showReward(String jsonString){
+
+  void showReward(String jsonString) {
     print('showReward(), , jsonString: ${jsonString}');
   }
-  void showDialog(String title, String text){
+
+  void showDialog(String title, String text) {
     print('showDialog()');
     print('title : ${title}');
     print('title : ${text}');
   }
-  void showToast(String msg){
+
+  void showToast(String msg) {
     print('showToast(), msg : ${msg}');
   }
-  void changeClass(){
+
+  void changeClass() {
     print('changeClass()');
   }
-  void setTitle(String strTitle){
+
+  void setTitle(String strTitle) {
     print('setTitle(), strTitle : ${strTitle}');
   }
-  void callFinish(){
+
+  void callFinish() {
     print('callFinish()');
   }
-  void hideKey(){
+
+  void hideKey() {
     print('hideKey()');
   }
-  void showKey(){
+
+  void showKey() {
     print('showKey()');
   }
-  void callNext(){
+
+  void callNext() {
     print('callNext()');
   }
-  void callVideoPlayer(String url){
+
+  void callVideoPlayer(String url) {
     print('callVideoPlayer(), url : ${url}');
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -137,66 +154,106 @@ class HomeView extends GetView {
                   ),
                   onWebViewCreated: (controller) {
                     webViewController = controller;
-                    webViewController.addJavaScriptHandler(handlerName: 'openAlbum', callback: (args){
-                      print('openAlbum(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'openAlbumOnly', callback: (args){
-                      print('openAlbumOnly(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'openActivityOnly', callback: (args){
-                      print('openActivityOnly(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'openActivirty', callback: (args){
-                      print('openActivirty(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'StudyComplete', callback: (args){
-                      print('StudyComplete(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'runScreeshot', callback: (args){
-                      print('runScreeshot(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'closeWindowWithStudyPlayer', callback: (args){
-                      print('closeWindowWithStudyPlayer(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'startWifiManager', callback: (args){
-                      print('startWifiManager(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'closeWindow', callback: (args){
-                      print('closeWindow(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'searchWord', callback: (args){
-                      print('searchWord(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'showReward', callback: (args){
-                      print('showReward(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'showDialog', callback: (args){
-                      print('showDialog(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'showToast', callback: (args){
-                      print('showToast(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'changeClass', callback: (args){
-                      print('changeClass(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'setTitle', callback: (args){
-                      print('setTitle(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'callFinish', callback: (args){
-                      print('callFinish(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'hideKey', callback: (args){
-                      print('hideKey(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'showKey', callback: (args){
-                      print('showKey(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'callNext', callback: (args){
-                      print('callNext(), args : ${args}');
-                    });
-                    webViewController.addJavaScriptHandler(handlerName: 'callVideoPlayer', callback: (args){
-                      print('callVideoPlayer(), args : ${args}');
-                    });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'openAlbum',
+                        callback: (args) {
+                          print('openAlbum(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'openAlbumOnly',
+                        callback: (args) {
+                          print('openAlbumOnly(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'openActivityOnly',
+                        callback: (args) {
+                          print('openActivityOnly(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'openActivirty',
+                        callback: (args) {
+                          print('openActivirty(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'StudyComplete',
+                        callback: (args) {
+                          print('StudyComplete(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'runScreeshot',
+                        callback: (args) {
+                          print('runScreeshot(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'closeWindowWithStudyPlayer',
+                        callback: (args) {
+                          print('closeWindowWithStudyPlayer(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'startWifiManager',
+                        callback: (args) {
+                          print('startWifiManager(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'closeWindow',
+                        callback: (args) {
+                          print('closeWindow(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'searchWord',
+                        callback: (args) {
+                          print('searchWord(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'showReward',
+                        callback: (args) {
+                          print('showReward(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'showDialog',
+                        callback: (args) {
+                          print('showDialog(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'showToast',
+                        callback: (args) {
+                          print('showToast(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'changeClass',
+                        callback: (args) {
+                          print('changeClass(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'setTitle',
+                        callback: (args) {
+                          print('setTitle(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'callFinish',
+                        callback: (args) {
+                          print('callFinish(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'hideKey',
+                        callback: (args) {
+                          print('hideKey(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'showKey',
+                        callback: (args) {
+                          print('showKey(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'callNext',
+                        callback: (args) {
+                          print('callNext(), args : ${args}');
+                        });
+                    webViewController.addJavaScriptHandler(
+                        handlerName: 'callVideoPlayer',
+                        callback: (args) {
+                          print('callVideoPlayer(), args : ${args}');
+                        });
                   },
                   initialOptions: options,
                   androidOnPermissionRequest:
@@ -223,27 +280,27 @@ class HomeView extends GetView {
                   //   return NavigationActionPolicy.ALLOW;
                   // },
                 ),
-                // WebView(
-                //   // initialUrl: widget.url,
-                //   initialUrl: textEditController.text,
-                //   javascriptMode: JavascriptMode.unrestricted,
-                //   javascriptChannels: Set.from([
-                //     JavascriptChannel(name: 'messageHandler', onMessageReceived: (JavascriptMessage message) {
-                //       print(message);
-                //     })
-                //   ]),
-                //   onWebViewCreated: (webController) {
-                //     webViewController = webController;
-                //
-                //   },
-                //   onPageFinished: (url) async {
-                //     var title = await webViewController.getTitle();
-                //     if (title != null && title.isEmpty) {
-                //       webViewController.reload();
-                //     }
-                //   },
-                // ),
               ),
+              // WebView(
+              //   // initialUrl: widget.url,
+              //   initialUrl: textEditController.text,
+              //   javascriptMode: JavascriptMode.unrestricted,
+              //   javascriptChannels: Set.from([
+              //     JavascriptChannel(name: 'messageHandler', onMessageReceived: (JavascriptMessage message) {
+              //       print(message);
+              //     })
+              //   ]),
+              //   onWebViewCreated: (webController) {
+              //     webViewController = webController;
+              //
+              //   },
+              //   onPageFinished: (url) async {
+              //     var title = await webViewController.getTitle();
+              //     if (title != null && title.isEmpty) {
+              //       webViewController.reload();
+              //     }
+              //   },
+              // ),
             ),
           ),
         ],
